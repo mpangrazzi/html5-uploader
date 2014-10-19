@@ -1,0 +1,49 @@
+body {
+  font-family: 'Lato', 'Helvetica Neue';
+  background: #f9f9f9;
+  color: #666;
+}
+
+#app {
+  max-width: 80%;
+  margin: 10px auto;
+  padding: 40px;
+}
+
+.heading {
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.title {
+  margin: 20px 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.desc {
+  margin-bottom: 25px;
+}
+
+.drop, .preview {
+  padding: 5px;
+  margin-top: 20px;
+  border-radius: 5px;
+  min-height: 50px;
+  background: #fff;
+}
+
+#dropbox {
+  border: 3px dashed #ddd;
+}
+
+.preview {
+  border: 1px solid #ddd;
+}
+
+.drop p, .preview p {
+  margin: 0;
+  text-align: center;
+  vertical-align: middle;
+  padding: 20px;
+}

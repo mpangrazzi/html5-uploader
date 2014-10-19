@@ -1,0 +1,42 @@
+{
+  "name": "html5-uploader",
+  "version": "0.0.1",
+  "description": "A pure HTML5 uploader",
+  "author": "Michele Pangrazzi <xmikex83@gmail.com>",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mpangrazzi/html5-uploader.git"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha",
+    "watch": "./node_modules/.bin/watchify ./examples/index.js ./lib/index.js -o ./examples/public/js/bundle.js -dv",
+    "dev": "npm run watch & ./node_modules/.bin/supervisor ./examples/server.js"
+  },
+  "dependencies": {
+    "dot": "^1.0.2",
+    "eventemitter3": "^0.1.5",
+    "multer": "^0.1.6"
+  },
+  "devDependencies": {
+    "express": "^4.9.7",
+    "humanize": "0.0.9",
+    "mocha": "^1.21.5",
+    "should": "^4.0.4",
+    "supervisor": "^0.6.0",
+    "underscore": "^1.7.0"
+  },
+  "keywords": [
+    "html5",
+    "uploader",
+    "upload",
+    "file",
+    "drag",
+    "drop"
+  ],
+  "license": "MIT",
+  "jshintConfig": {
+    "loopfunc": true,
+    "multistr": true
+  }
+}
