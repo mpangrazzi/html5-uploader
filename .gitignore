@@ -1,6 +1,10 @@
 node_modules/
 coverage/
 
+examples/public/uploads/*
+
+dist/
+
 *.log
 
 .DS_Store

@@ -9,8 +9,6 @@ var humanize = require('humanize');
 
 module.exports = function() {
 
-  var $preview = document.querySelector('#dropbox-preview');
-
   var dropbox = new Uploader({
     el: '#dropbox',
     url: '/upload'
@@ -23,17 +21,25 @@ module.exports = function() {
   </p>');
 
   dropbox.on('dragover', function(e) {
-    console.log(e);
+    this.$el.className = 'drop hover';
+  });
+
+  dropbox.on('dragleave', function(e) {
+    this.$el.className = 'drop';
   });
 
   dropbox.on('dragend', function(e) {
-    console.log(e);
+    this.$el.className = 'drop';
+  });
+
+  dropbox.on('drop', function(e) {
+    this.$el.className = 'drop';
   });
 
   dropbox.on('files:added', function() {
 
-    while ($preview.firstChild) {
-      $preview.removeChild($preview.firstChild);
+    while (this.$el.firstChild) {
+      this.$el.removeChild(this.$el.firstChild);
     }
 
     this.upload();
@@ -46,7 +52,7 @@ module.exports = function() {
       $img.style.maxWidth = '100%';
       $img.style.maxHeight = '100%';
 
-      $preview.appendChild($img);
+      this.$el.appendChild($img);
 
     } else {
 
@@ -56,7 +62,7 @@ module.exports = function() {
         type: file.type || 'unknown'
       });
 
-      $preview.innerHTML += html;
+      this.$el.innerHTML += html;
 
     }
 

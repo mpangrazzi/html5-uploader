@@ -37,6 +37,10 @@ body {
   border: 3px dashed #ddd;
 }
 
+#dropbox.hover {
+  border-color: #9DC234;
+}
+
 .preview {
   border: 1px solid #ddd;
 }

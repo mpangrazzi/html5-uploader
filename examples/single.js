@@ -31,7 +31,7 @@ module.exports = function() {
       $preview.removeChild($preview.firstChild);
     }
 
-    // this.upload();
+    this.upload();
   });
 
   single.on('file:preview', function(file, $img) {
