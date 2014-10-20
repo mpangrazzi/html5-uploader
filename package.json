@@ -9,7 +9,7 @@
     "url": "git://github.com/mpangrazzi/html5-uploader.git"
   },
   "scripts": {
-    "test": "./node_modules/.bin/mocha",
+    "test": "npm run build && cp ./dist/html5-uploader.js ./test/public && node ./test/server.js",
     "build": "./node_modules/.bin/browserify ./lib/index.js -s Uploader -o ./dist/html5-uploader.js",
     "build-min": "./node_modules/.bin/browserify ./lib/index.js -s Uploader | ./node_modules/.bin/uglifyjs -mc > ./dist/html5-uploader.min.js",
     "watch": "./node_modules/.bin/watchify ./examples/index.js ./lib/index.js -o ./examples/public/js/bundle.js -dv",
@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "browserify": "^6.1.0",
-    "express": "^4.9.7",
+    "express": "^4.9.8",
     "humanize": "0.0.9",
     "mocha": "^1.21.5",
     "should": "^4.0.4",
@@ -41,6 +41,7 @@
   "license": "MIT",
   "jshintConfig": {
     "loopfunc": true,
-    "multistr": true
+    "multistr": true,
+    "expr": true
   }
 }
