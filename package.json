@@ -10,15 +10,19 @@
   },
   "scripts": {
     "test": "./node_modules/.bin/mocha",
+    "build": "./node_modules/.bin/browserify ./lib/index.js -s Uploader -o ./dist/html5-uploader.js",
+    "build-min": "./node_modules/.bin/browserify ./lib/index.js -s Uploader | ./node_modules/.bin/uglifyjs -mc > ./dist/html5-uploader.min.js",
     "watch": "./node_modules/.bin/watchify ./examples/index.js ./lib/index.js -o ./examples/public/js/bundle.js -dv",
     "dev": "npm run watch & ./node_modules/.bin/supervisor ./examples/server.js"
   },
   "dependencies": {
     "dot": "^1.0.2",
     "eventemitter3": "^0.1.5",
-    "multer": "^0.1.6"
+    "multer": "^0.1.6",
+    "uglify-js": "^2.4.15"
   },
   "devDependencies": {
+    "browserify": "^6.1.0",
     "express": "^4.9.7",
     "humanize": "0.0.9",
     "mocha": "^1.21.5",
