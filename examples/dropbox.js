@@ -42,7 +42,8 @@ module.exports = function() {
       this.$el.removeChild(this.$el.firstChild);
     }
 
-    this.upload();
+    // this.upload();
+    console.log('Upload is disabled. Clone mpangrazzi/html5-uploader and uncomment it on examples/dropbox.js!');
   });
 
   dropbox.on('file:preview', function(file, $img) {

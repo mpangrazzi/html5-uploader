@@ -31,7 +31,8 @@ module.exports = function() {
       $preview.removeChild($preview.firstChild);
     }
 
-    this.upload();
+    // this.upload();
+    console.log('Upload is disabled. Clone mpangrazzi/html5-uploader and uncomment it on examples/single.js!');
   });
 
   single.on('file:preview', function(file, $img) {

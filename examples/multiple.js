@@ -29,6 +29,7 @@ module.exports = function() {
     }
 
     // this.upload();
+    console.log('Upload is disabled. Clone mpangrazzi/html5-uploader and uncomment it on examples/multiple.js!');
   });
 
   multiple.on('file:preview', function(file, $img) {
