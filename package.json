@@ -16,10 +16,7 @@
     "dev": "npm run watch & ./node_modules/.bin/supervisor ./examples/server.js"
   },
   "dependencies": {
-    "dot": "^1.0.2",
-    "eventemitter3": "^0.1.5",
-    "multer": "^0.1.6",
-    "uglify-js": "^2.4.15"
+    "eventemitter3": "^0.1.5"
   },
   "devDependencies": {
     "browserify": "^6.1.0",
@@ -28,7 +25,9 @@
     "mocha": "^1.21.5",
     "should": "^4.0.4",
     "supervisor": "^0.6.0",
-    "underscore": "^1.7.0"
+    "underscore": "^1.7.0",
+    "multer": "^0.1.6",
+    "uglify-js": "^2.4.15"
   },
   "keywords": [
     "html5",
