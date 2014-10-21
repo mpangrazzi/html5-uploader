@@ -5,6 +5,8 @@ examples/public/uploads/*
 
 dist/
 
+test/public/html5*
+
 *.log
 
 .bundle*
