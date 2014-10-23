@@ -31,7 +31,13 @@ module.exports = function() {
       $preview.removeChild($preview.firstChild);
     }
 
-    // this.upload();
+    // Appending a sample field on underlying formData
+
+    this.formData.append('sample', 'test');
+
+    // uploading
+
+    //this.upload();
     console.log('Upload is disabled. Clone mpangrazzi/html5-uploader and uncomment it on examples/single.js!');
   });
 
