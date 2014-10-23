@@ -88,12 +88,20 @@ Alternatively, you can view them on [http://mpangrazzi.github.io](http://mpangra
 
 Fired when one or more files are added to `Uploader` instance.
 
+You can also have access to underlying **FormData** object here, which already contains your file. So, you can easily append other fields, if you want.
+
 ```js
 uploader.on('files:added', function(files) {
 
   /**
    * Here you have files, so you can perform validations, UI changes, ...
    */
+  
+  /**
+   * Appending a sample field to underlying FormData object
+   */
+  
+  this.formData.append('sample', 'test');
   
 });
 ```
