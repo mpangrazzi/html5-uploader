@@ -32,7 +32,8 @@ app.post('/upload', function(req, res) {
   }
 
   res.json({
-    files: req.files.file
+    files: req.files.file,
+    fields: req.body
   });
 
 });
