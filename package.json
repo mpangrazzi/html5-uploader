@@ -10,8 +10,8 @@
   },
   "scripts": {
     "test": "npm run build && cp ./dist/html5-uploader.js ./test/public && node ./test/server.js",
-    "build": "./node_modules/.bin/browserify ./lib/index.js -s Uploader -o ./dist/html5-uploader.js",
-    "build-min": "./node_modules/.bin/browserify ./lib/index.js -s Uploader | ./node_modules/.bin/uglifyjs -mc > ./dist/html5-uploader.min.js",
+    "build": "mkdir ./dist && ./node_modules/.bin/browserify ./lib/index.js -s Uploader -o ./dist/html5-uploader.js",
+    "build-min": "mkdir ./dist && ./node_modules/.bin/browserify ./lib/index.js -s Uploader | ./node_modules/.bin/uglifyjs -mc > ./dist/html5-uploader.min.js",
     "watch": "./node_modules/.bin/watchify ./examples/index.js ./lib/index.js -o ./examples/public/js/bundle.js -dv",
     "dev": "npm run watch & ./node_modules/.bin/supervisor ./examples/server.js"
   },
