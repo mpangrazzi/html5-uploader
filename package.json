@@ -1,6 +1,6 @@
 {
   "name": "html5-uploader",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A pure HTML5 uploader",
   "author": "Michele Pangrazzi <xmikex83@gmail.com>",
   "main": "index.js",
