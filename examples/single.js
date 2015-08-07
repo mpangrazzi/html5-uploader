@@ -16,7 +16,8 @@ module.exports = function() {
 
   var single = new Uploader({
     el: '#input-single',
-    url: '/upload'
+    url: '/upload',
+    headers: {testheader: "testval", testheader2: null}
   });
 
   var t = template('<p> \

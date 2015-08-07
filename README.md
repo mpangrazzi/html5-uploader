@@ -224,6 +224,7 @@ var uploader = new Uploader({ ... });
 - `name`: Name of the FormData param used for upload. Default: `file`.
 - `url`: URL of your server-side upload API endpoint. If omitted, calling upload() will throw or emit and error.
 - `method`: Request method used during upload. Default: `POST`.
+- `headers`: An optional object with headers to be set on the XHR object before sending,  e.g. `{'X-CSRFToken': token}` 
 
 
 ### Public methods

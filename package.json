@@ -23,11 +23,12 @@
     "express": "^4.9.8",
     "humanize": "0.0.9",
     "mocha": "^1.21.5",
+    "multer": "^0.1.6",
     "should": "^4.0.4",
     "supervisor": "^0.6.0",
+    "uglify-js": "^2.4.15",
     "underscore": "^1.7.0",
-    "multer": "^0.1.6",
-    "uglify-js": "^2.4.15"
+    "watchify": "^3.3.1"
   },
   "keywords": [
     "html5",
