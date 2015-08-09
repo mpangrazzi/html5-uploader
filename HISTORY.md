@@ -1,3 +1,8 @@
+0.1.0 / 2015-08-07
+==================
+
+* Custom headers support in XHR requests via `headers` initialization option
+
 0.0.3 / 2014-10-27
 ==================
 
