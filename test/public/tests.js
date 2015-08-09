@@ -70,7 +70,7 @@ describe('Uploader', function() {
   });
 
 
-  it('Should have defaults for method, name, url', function() {
+  it('Should have defaults for method, name, url, headers', function() {
     var $div = document.createElement('div');
 
     var uploader = new Uploader({
@@ -79,6 +79,7 @@ describe('Uploader', function() {
 
     uploader.method.should.be.equal('POST');
     uploader.name.should.be.equal('file');
+    uploader.headers.should.containEql({});
     Should(uploader.url === null).be.true;
   });
 
@@ -136,6 +137,31 @@ describe('Uploader', function() {
       var data = JSON.parse(res);
       data.status.should.equal('ok');
 
+      done();
+    });
+
+    uploader.upload();
+  });
+
+  it('Should include custom headers', function(done) {
+    var $div = document.createElement('div');
+
+    var headers = {
+      'x-csrftoken': 'abcd1234',
+      'authorization': 'Bearer 0abc27767863beff6487368847ef'
+    };
+
+    var uploader = new Uploader({
+      el: $div,
+      url: '/upload/returnheaders',
+      headers: headers
+    });
+
+    uploader.files.push(mockFile());
+
+    uploader.on('upload:done', function(res) {
+      var data = JSON.parse(res);
+      data.headers.should.have.properties(headers);
       done();
     });
 

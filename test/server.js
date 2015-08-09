@@ -24,6 +24,10 @@ app.post('/upload', function(req, res) {
   res.json({ status: 'ok'});
 });
 
+app.post('/upload/returnheaders', function(req, res) {
+  res.json({headers: req.headers});
+});
+
 app.listen(3000, function() {
   console.log('Test server listening on port 3000');
 });
