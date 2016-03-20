@@ -1,3 +1,8 @@
+0.1.1 / 2016-03-20
+==================
+
+* `file:preview` event is now always fired (even if one keep uploading the same file over and over)
+
 0.1.0 / 2015-08-07
 ==================
 
