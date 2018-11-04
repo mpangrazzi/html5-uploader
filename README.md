@@ -96,19 +96,19 @@ uploader.on('files:added', function(files) {
   /**
    * Here you have files, so you can perform validations, UI changes, ...
    */
-  
+
   /**
    * Appending a sample field to underlying FormData object
    */
-  
+
   this.formData.append('sample', 'test');
-  
+
 });
 ```
 
 #### "file:preview"
 
-Fired once for every file added. 
+Fired once for every file added.
 
 If the file matches `image/*` mime type it's readed using [FileReader](https://developer.mozilla.org/en-US/docs/Web/API/FileReader) API and `$img` (a DOM image element) is provided on event handler.
 
@@ -119,12 +119,12 @@ uploader.on('file:preview', function(file, $img) {
    * Here you can populate a preview template with `file` or `$img`.
    * For example:
    */
-  
+
   if ($img) {
     var $preview = document.getElementById('#preview');
     div.appendChild($img);
   }
-  
+
 });
 ```
 
@@ -138,7 +138,7 @@ uploader.on('files:cleared', function() {
   /**
    * Here you may clear your #preview element
    */
-  
+
 });
 ```
 
@@ -150,11 +150,13 @@ If upload progress support is available in `XMLHttpRequest`, then this event is 
 uploader.on('upload:progress', function(progress) {
 
   /**
-   * `progress` is a Number between 0 and 100.
-   * 
+   * `progress` is a float Number between 0.0 and 100.0.
+   *
    * Here you can, for example, increment a progress bar.
+   *
+   * You can format the number using `Math.floor(progress)`, `progress.toFixed(2)` etc.
    */
-  
+
 });
 ```
 
@@ -167,10 +169,10 @@ uploader.on('upload:done', function(response) {
 
   /**
    * `response` is the server response, returned as a String
-   * 
+   *
    * Here you can, for example, notify the user.
    */
-  
+
 });
 ```
 
@@ -182,9 +184,9 @@ Fired when an error occurs (e.g. upload failed). I strongly recommend to add a l
 uploader.on('error', function(err) {
 
   /**
-   * `err` is an Error instance. 
-   * 
-   * If there's an error during upload, `err` will also have a `status` 
+   * `err` is an Error instance.
+   *
+   * If there's an error during upload, `err` will also have a `status`
    * property containing the HTTP status code received from server
    */
 
@@ -224,7 +226,7 @@ var uploader = new Uploader({ ... });
 - `name`: Name of the FormData param used for upload. Default: `file`.
 - `url`: URL of your server-side upload API endpoint. If omitted, calling upload() will throw or emit and error.
 - `method`: Request method used during upload. Default: `POST`.
-- `headers`: An optional object with headers to be set on the XHR object before sending,  e.g. `{'X-CSRFToken': token}` 
+- `headers`: An optional object with headers to be set on the XHR object before sending,  e.g. `{'X-CSRFToken': token}`
 
 
 ### Public methods
